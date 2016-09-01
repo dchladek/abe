@@ -1,0 +1,16 @@
+//Far East Shop IBE to add cutom text whenever certain IATA numbers are used.
+
+<script>
+
+if(abe_searchParams["iataNumber"] == "repeatsavers")
+{
+    $('.abe-room-info-holder div.abe-r-title').append("<br><span class='repeatsavers'>+5% Off - Mailing List Exclusive</span>");
+}
+</script>
+
+<style>
+    .repeatsavers
+    {
+        color:#49A08E;
+    }
+</style>
