@@ -1,0 +1,5 @@
+
+//ABE expand all rooms/rates
+<script>
+$('span.abe-icon-chevron-down').click();
+</script>
