@@ -1,0 +1,17 @@
+//Various WW hotel like HAVIEDAN, HAGRZGHW, HAGRZGRA
+
+<script>
+$( document ).ready(function() {
+$('#abe-guestId1').blur(function() {
+var val = $('#abe-guestId1').val();
+var s = val.substr(0, 4);
+var patt = /WPP-/i;
+var result = s.match(patt);
+if( val.length>0 && !result)
+{
+var combineval = "WPP-" + val;
+$(this).val(combineval);
+}
+});
+});
+</script>
