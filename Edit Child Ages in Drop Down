@@ -1,0 +1,18 @@
+//HLLW1422
+
+<script>
+$('#abe-search-children').change(function() {
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=14]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=15]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=16]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=17]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=18]').remove();
+});
+$( window ).load(function() {
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=14]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=15]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=16]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=17]').remove();
+$('div.dropdown-menu.open ul.dropdown-menu.inner li[data-original-index=18]').remove();
+});
+</script>
