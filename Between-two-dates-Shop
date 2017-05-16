@@ -19,4 +19,23 @@ if((adate <= edate && adate >= fdate))
 {
 //Code to add what to change here
 });
+
+
+//Changed to script below as arrivalDate is now showing as YYYY-MM-DD instead of MM/DD/YYYY
+
+$( document ).ready(function() {
+var fdate = "2017-06-01";
+var edate = "2017-10-01";
+var adate = abe_searchParams.arrivalDate;
+
+if((adate <= edate && adate >= fdate))
+{
+alert("text fired");
+$('.abe-hotel-navbar').after('<div class="row specialtext"><p>We’re very excited to announce Carillon Miami Wellness Resort will be undergoing a renovation. The project will enhance several areas of the resort providing new and re-designed spaces to improve the overall guest experience. The resort renovation will take place in several public spaces starting June 1, 2017 – October 1, 2017.  The updates will take place in the lobby, reception area, restaurant, bar and lounge, boutique and in our meeting spaces.  Certain areas may be closed during your stay but at all times the hotel will offer breakfast, lunch and dinner to guests. The renovation varies by location but be assured it is business as usual as we look to further enhance this beautiful wellness resort on Miami Beach. The Spa, Fitness and Wellness areas, pool and beach operations will not undergo any renovations. Any other questions, please contact Carillon Miami Wellness Resort at 1-866-800-3858</p></div>');
+$('.specialtext').css("margin-top","20px");
+$('.specialtext').css("margin-left","10px");
+$('.specialtext p').css("color", "blue");
+}
+});
+
 </script>
