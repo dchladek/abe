@@ -1,0 +1,3 @@
+//Remove everything after decimal point.  Truncate to just whole price in string   HLLW1406
+
+$('.abe-room-price span strong').each(function() { var str = $(this).html();  var number = str.split(".")[0]; $(this).html(number); });
