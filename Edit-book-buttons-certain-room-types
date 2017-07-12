@@ -1,0 +1,42 @@
+<script>
+$( document ).ready(function() {
+var fdate = "2017-06-01";
+var edate = "2017-12-31";
+var adate = abe_searchParams.arrivalDate;
+
+    if((adate <= edate && adate >= fdate))
+    {
+        $('.abe-room-button-cta form').each(function() {
+    
+        var formAction = $(this).attr('action');
+    
+        if (~formAction.indexOf("E1S"))
+        {
+        $(this).children(".btn-primary").val("To book this suite please call +44 (0)20 7406 3322 ");
+        $(this).children(".btn-primary").prop("disabled", true);
+        $(this).closest(".abe-room-price").find(".abe-md-lg-pull-right").eq(0).remove();
+        $(this).children(".btn-primary").css("white-space", "normal");
+        }
+        
+        if (~formAction.indexOf("F1S"))
+        {
+        $(this).children(".btn-primary").val("To book this suite please call +44 (0)20 7406 3322 ");
+        $(this).children(".btn-primary").prop("disabled", true);
+        $(this).closest(".abe-room-price").find(".abe-md-lg-pull-right").eq(0).remove();
+        $(this).children(".btn-primary").css("white-space", "normal");
+        }
+        
+        if (~formAction.indexOf("B1S"))
+        {
+        $(this).children(".btn-primary").val("To book this suite please call +44 (0)20 7406 3322 ");
+        $(this).children(".btn-primary").prop("disabled", true);
+        $(this).closest(".abe-room-price").find(".abe-md-lg-pull-right").eq(0).remove();
+        $(this).children(".btn-primary").css("white-space", "normal");
+        }
+        
+        });
+    }
+    
+});
+
+</script>
