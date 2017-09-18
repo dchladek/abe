@@ -1,0 +1,18 @@
+//HLLW1606 to basically remove "cents" portion of the price with else statement for languages where the decimal and comma are reversed.  German, French, Italian
+
+if(abe_customer.language == "en_EN")
+{
+$('.abe-room-price span strong').each(function(i, obj){
+var total = $(this).html();
+total = total.substring(0, total.indexOf('.'));
+$(this).html(total);
+});
+} else {
+    
+$('.abe-room-price span strong').each(function(i, obj){
+var total = $(this).html();
+total = total.substring(0, total.indexOf(','));
+$(this).html(total);
+});
+}
+
