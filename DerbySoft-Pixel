@@ -1,0 +1,20 @@
+<script>
+for (i=0; i < abe_reservationDetails.length; i++)
+{
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}
+
+var getiata = abe_reservationDetails[0]["guestIATA"];
+if(getiata.substr(0, 2) == "DS")
+{
+var getsite = getUrlVars()["site"];
+var totalamount = abe_reservationDetails[i]["rooms"]["roomTotal"] - abe_reservationDetails[i]["rooms"]["totalTaxes"];
+document.write('<img height="1" width="1" style="border-style:none;display: none" alt="" src="https://linkcenterus.derbysoftca.com/dplatform-linkcenter/trackBooking?accountCode=occupancy&bookingNo=' + abe_reservationDetails[i]["rooms"]["reservationNumber"] +'&ChannelCode='+getsite+'&hotelCode='+abe_reservationDetails[i]["rooms"]["hotelCode"] +'&roomTypeName='+abe_reservationDetails[i]["rooms"]["roomCode"] +'&roomTypeCode='+abe_reservationDetails[i]["rooms"]["roomCode"] +'&ratePlanName='+abe_reservationDetails[i]["rooms"]["rateDescription"] +'&ratePlanCode='+abe_reservationDetails[i]["rooms"]["rateCode"]+'&checkInDate='+abe_reservationDetails[i]["rooms"]["arrivalDate"] +'&checkOutDate='+abe_reservationDetails[i]["rooms"]["departureDate"]+'&guests='+abe_reservationDetails[i]["rooms"]["numberOfAdults"]+'&rooms=1&netAmount='+ totalamount+'&totalAmount='+ abe_reservationDetails[i]["rooms"]["roomTotal"] +'&currency='+abe_reservationDetails[i]["rooms"]["hotelCurrency"]+'&channelSite='+ getsite +'"/>');
+}
+}
+</script>
